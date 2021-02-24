@@ -1,7 +1,5 @@
 package Mine;
 
-import Mine.BinaryTree;
-import Mine.BinaryTreeNode;
 
 public class LinkedBinaryTree<String> implements BinaryTree<String>
 {

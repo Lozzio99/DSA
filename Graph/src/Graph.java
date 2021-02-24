@@ -1,4 +1,5 @@
 import java.util.List;
+
 //Graph interface// Simplication: There are no duplicate values in T
 public interface Graph<T>
 {

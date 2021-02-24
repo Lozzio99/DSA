@@ -1,5 +1,4 @@
-import Mine.BinaryTree;
-import Mine.BinaryTreeNode;
+package Mine;
 
 public class LinearFamilyTree
 {
@@ -32,6 +31,7 @@ public class LinearFamilyTree
     {
         return linearizeI(tree.getRoot());
     }
+
     public String linearizeI(BinaryTreeNode<Integer> node)
     {
         String string = "("  ;

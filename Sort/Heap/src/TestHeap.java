@@ -1,10 +1,4 @@
-import com.sun.jdi.Value;
-
-import java.security.Key;
-import java.util.Arrays;
-import java.util.Hashtable;
 import java.util.Random;
-
 public class TestHeap
 {
     public static void main(String[] args) throws Exception {
@@ -12,6 +6,7 @@ public class TestHeap
 
         for (int i = 0; i< heapify.length; i++)
         {
+
             heapify[i] = new Random().nextInt(50);
 
         }
@@ -23,9 +18,14 @@ public class TestHeap
         }
         print(heap);
 
+        heap.delete(0);
+        print(heap);
+        heap.delete(1);
+        print(heap);
+        heap.delete(2);
+        print(heap);
         heap.delete(3);
         print(heap);
-
     }
     static void print(Heap heap)
     {

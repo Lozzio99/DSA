@@ -1,10 +1,5 @@
 package Mine;
 
-import Mine.BinaryTree;
-import Mine.BinaryTreeNode;
-import Mine.LinkedBinaryTree;
-import Mine.LinkedBinaryTreeNode;
-
 public class BinarySearchTree
 {
     BinaryTree<Integer> tree = new LinkedBinaryTree<>();
@@ -67,7 +62,7 @@ public class BinarySearchTree
             if (visited.getElement()==null) //first time we call this method, then visited is updated in recursion
                 visited = this.tree.getRoot();
 
-            if (visited.getElement().equals(e)) //first try or first check in recursion
+            if (visited.getElement().equals(e)) //first check in recursion
             {
                 if (!(visited.hasLeftChild()&& visited.hasRightChild()))
                 {
@@ -98,6 +93,7 @@ public class BinarySearchTree
                     replace.setElement(visited.getElement());
                     visited.delete();
                     reset();
+                    return true;
                 }
             }
             if (!(visited.hasRightChild()&& visited.hasRightChild()))   //no child, no equals
@@ -106,7 +102,7 @@ public class BinarySearchTree
                 return false;
             }
 
-            else  //has a child
+            else  //has a child not equal element
             {
                 if (e< visited.getElement())  //should go to the left
                 {
@@ -137,6 +133,8 @@ public class BinarySearchTree
     {
         visited = new LinkedBinaryTreeNode<>(null,null);
     }
+
+
     public boolean find(Integer e)
     {
         if (this.tree.hasRoot() )

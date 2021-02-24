@@ -68,7 +68,7 @@ public class Frame extends JFrame
         {
             long lastTime = System.nanoTime();
             double elapsedTime = 0.0;
-            double FPS = 820000.0;
+            double FPS = 822000000.0;
             // Game loop.
             while (true) {
                 long now = System.nanoTime();

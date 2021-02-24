@@ -4,7 +4,6 @@ public class test {
     public static void main(String[] args) {
         GraphAdjacencyList<Integer> g = new GraphAdjacencyList<>();
 
-        printNeighbours(g);
         g.addEdge( 1,  2);
         g.addEdge( 3,  2);
         g.addEdge( 4,  2);
@@ -14,17 +13,18 @@ public class test {
         g.addEdge( 8,  2);
 
         printNeighbours(g);
+        System.out.println(g.neighbors(5));
 
-        g.removeEdge(7,2);
-        printNeighbours(g);
 
-        g.removeVertex(2);
-        printNeighbours(g);
+        Search<Integer> s = new Search<>();
+        System.out.println(s.BFS(g,3));
 
     }
     public static void printNeighbours(GraphAdjacencyList<Integer> g)
     {
-        for (List<Integer> i : g.E)
-                System.out.println(i);
+        for (GraphAdjacencyList.Vertex v : g.getGraphNodes())
+        {
+            System.out.println(v.getConnected());
+        }
     }
 }
